@@ -22,6 +22,7 @@ Encore
      */
     .addEntry('app', './assets/styles/js/app.js')
     .addEntry('security', './assets/styles/js/user/security.js')
+    .addEntry('logout', './assets/styles/js/user/logout.js')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()

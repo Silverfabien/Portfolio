@@ -29,4 +29,10 @@ final class SecurityController extends AbstractController
             'form' => $form->createView()
         ]);
     }
+
+    #[Route('/logout', name: 'logout')]
+    public function logout(): Response
+    {
+       return $this->render('security/logout.html.twig');
+    }
 }

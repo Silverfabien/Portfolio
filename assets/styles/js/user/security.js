@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
 $(document).ready(function() {
-    function handleForm(formId, apiUrl, fields) {
+    function handleForm(formId, apiUrl, fields, extras = {}) {
         $(formId).on('submit', function(e) {
             e.preventDefault();
 
@@ -9,6 +9,8 @@ $(document).ready(function() {
             fields.forEach(field => {
                 data[field] = $(`${formId} [name$="[${field}]"]`).val();
             });
+
+            Object.assign(data, extras);
 
             $.ajax({
                 url: apiUrl,
@@ -21,13 +23,27 @@ $(document).ready(function() {
                 success: function () {
                     $(`${formId} ~ #result`).text('Opération réussie !');
                 },
-                error: function () {
+                error: function (t) {
+                    console.log(t);
                     $(`${formId} ~ #result`).text('Une erreur est survenue');
                 }
             });
         });
     }
 
-    handleForm('#login-form', 'https://silversat-api.silversat.ovh/api/login', ['email', 'password']);
-    handleForm('#register-form', 'https://silversat-api.silversat.ovh/api/register', ['username', 'email', 'password']);
+    const baseUrl = window.location.origin;
+    const resetPath = '/reset-forgot-password/';
+    const resetUrl = baseUrl + resetPath;
+    const apiUrl = 'https://silversat-api.silversat.ovh/api';
+    function getResetTokenFromUrl() {
+        const match = window.location.pathname.match(/\/reset-forgot-password\/([^/?#]+)/);
+        return match ? match[1] : null;
+    }
+    const resetToken = getResetTokenFromUrl();
+
+
+    handleForm('#login-form', apiUrl+'/login', ['email', 'password']);
+    handleForm('#register-form', apiUrl+'/register', ['username', 'email', 'password']);
+    handleForm('#forgot-password-form', apiUrl+'/forgot-password', ["email"], { url: resetUrl });
+    handleForm('#reset-forgot-password-form', apiUrl+`/reset-forgot-password/${resetToken}`, ["password"]);
 })
