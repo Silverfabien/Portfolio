@@ -1,0 +1,23 @@
+<nav class="nav">
+    <div class="nav-title">
+        <a href="{{ path('default') }}">Portfolio</a>
+    </div>
+    <div class="nav-list">
+        <ul class="nav-list-links">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#about">Présentation</a></li>
+            <li><a href="#course">Parcours</a></li>
+            <li><a href="#project">Projet</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="nav-trigger">
+        <i></i>
+        <i></i>
+        <i></i>
+    </div>
+</nav>
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('navbar') }}
+{% endblock %}
