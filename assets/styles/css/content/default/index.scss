@@ -24,7 +24,80 @@
   }
 }
 
-@media (max-width: 1370px) {
+#about, #project {
+  background-color: midnightblue;
+}
+
+.about-me {
+  padding: 50px 10%;
+  display: flex;
+
+  &-left {
+    width: 30%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &-right {
+    width: 70%;
+    padding-left: 10%;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 0;
+
+      li {
+        width: 50%;
+        padding: 10px 0;
+        list-style: none;
+        display: block;
+
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .about-me-left {
+    width: 20%;
+  }
+
+  .about-me-right {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .about-me {
+    display: block!important;
+  }
+
+  .about-me-left {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+
+  .about-me-right {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-me {
+    ul {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 1370px) {
   .banner {
     background-size: cover;
   }
