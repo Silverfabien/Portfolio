@@ -24,7 +24,7 @@
   }
 }
 
-#about, #project {
+#project {
   background-color: midnightblue;
 }
 
@@ -43,6 +43,7 @@
   &-right {
     width: 70%;
     padding-left: 10%;
+    padding-top: 2%;
 
     ul {
       display: flex;
@@ -60,6 +61,42 @@
         }
       }
     }
+  }
+}
+
+.project-list {
+  padding: 50px 10%;
+
+  img {
+    height: 200px;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+
+    li {
+      border: 1px solid black;
+      padding: 5px 15px;
+      border-radius: 50px;
+      margin: 7px;
+    }
+  }
+
+  a {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0 10px 10px 10px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .site {
+    text-align: center;
   }
 }
 
