@@ -24,7 +24,7 @@
   }
 }
 
-#project {
+#project, #contact {
   background-color: midnightblue;
 }
 
@@ -97,6 +97,46 @@
 
   .site {
     text-align: center;
+  }
+}
+
+.skills-list {
+  padding: 50px 10%;
+
+  .progress {
+    height: 20px;
+    margin-bottom: 20px;
+
+    [class*="bar-"] {
+      text-align: left;
+      font-size: 15px;
+      padding: 5px 15px;
+      font-weight: bold;
+    }
+
+    $bars: (
+      php: #4F5B93,
+      html: #F16529,
+      css: #2965F1,
+      js: #F0DB4F,
+      sql: #00758F,
+      symfony: black,
+      bootstrap: #7952B3,
+      jquery: #0769AD
+    );
+
+    @each $name, $color in $bars {
+      .bar-#{$name} {
+        background-color: $color;
+      }
+    }
+
+    @for $i from 1 through 10 {
+      $w: $i * 10;
+      .w-#{$w} {
+        width: $w * 1%;
+      }
+    }
   }
 }
 
