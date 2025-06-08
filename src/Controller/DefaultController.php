@@ -56,7 +56,7 @@ final class DefaultController extends AbstractController
      */
     private function mail(array $data): void
     {
-        $to = $this->params->get('mail_to');
+        $to = $this->params->get('email_to');
 
         $email = (new Email())
             ->from($data['email'])
