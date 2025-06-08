@@ -194,6 +194,16 @@
             </div>
         </div>
     </section>
-    <section id="contact">Test</section>
+    <section id="contact">
+        <div class="contact-me">
+            <h2>Formulaire de contact</h2>
+            {{ form_start(form) }}
+                {{ form_row(form.email) }}
+                {{ form_row(form.subject) }}
+                {{ form_row(form.message) }}
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            {{ form_end(form) }}
+        </div>
+    </section>
     <footer>Test</footer>
 {% endblock %}

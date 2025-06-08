@@ -140,6 +140,18 @@
   }
 }
 
+.contact-me {
+  padding: 50px 10%;
+
+  .form-group {
+    margin-bottom: 20px;
+
+    label {
+      margin-bottom: 5px;
+    }
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .about-me-left {
     width: 20%;
