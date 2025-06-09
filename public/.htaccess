@@ -1,0 +1,15 @@
+# Redirection automatique vers HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Accès direct aux fichiers existants
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# Accès direct aux répertoires existants
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Rediriger tout le reste vers index.php (Front controller Symfony)
+RewriteRule ^ index.php [L]
