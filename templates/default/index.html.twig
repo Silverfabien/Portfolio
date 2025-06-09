@@ -1,0 +1,209 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hollebeque Fabien{% endblock %}
+
+{% block body %}
+    <header class="banner">
+        <div class="banner-in">
+            <h1>Hollebeque Fabien</h1>
+            <h4>Développeur Backend Symfony Junior</h4>
+            <p>
+                Je suis actuellement à la recherche d'un emploi dans le but d'appliquer et d'approfondir mes
+                connaissances dans un milieu professionnel.
+            </p>
+        </div>
+    </header>
+    <section id="about">
+        <div class="about-me">
+            <div class="about-me-left">
+                <img class="rounded-circle" src="{{ asset('pictures/pdp.png') }}" alt="photo de profil">
+            </div>
+            <div class="about-me-right">
+                <h2>À propos de moi</h2>
+                <p>
+                    Passionné par le développement web Backend, je me suis spécialisé sur le framework Symfony. Graçe à
+                    ma formation, mes projets personnels et en binôme, j'ai acquis une autonomie pour amener à bien les
+                    projets. Étant persévérant, j'aime relever les défis et d'essayer de les surmonter par mes propres
+                    moyens.
+                </p>
+                <ul>
+                    <li><b>Mail :</b> <a href="mailto:hollebeque.fabien@hotmail.com">hollebeque.fabien@hotmail.com</a></li>
+                    <li><b>Téléphone :</b> <a href="tel:0658546450">06 58 54 64 50</a></li>
+                    <li><b>Âge :</b> 28 ans</li>
+                    <li><b>Ville :</b> 60510 Essuiles</li>
+                    <li><b>Github :</b> <a href="https://github.com/Silverfabien">SilverFabien</a></li>
+                    <li><b>Linkedin :</b> <a href="www.linkedin.com/in/fabien-hollebeque-b21556140">Hollebeque Fabien</a></li>
+                </ul>
+                <a class="btn btn-info" href="{{ asset('pdf/Hollebeque Fabien.pdf') }}" target="_blank">Voir mon CV</a>
+            </div>
+        </div>
+    </section>
+    <section id="project">
+        <div class="project-list">
+            <h2>Mes projets réalisés</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="{{ asset('pictures/api.jpg') }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Silversat Api</h5>
+                            <p class="card-text">
+                                Api d'authentification et de gestion des utilisateurs. Ce projet gére la connexion à
+                                tous mes projets actuels et futurs.
+                            </p>
+                            <ul>
+                                <li>Symfony</li>
+                                <li>Api Rest</li>
+                                <li>MySql</li>
+                            </ul>
+                        </div>
+                        <a href="https://github.com/Silverfabien/SilversatApi">Projet sur Github</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="{{ asset('pictures/minecraft.jpg') }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">ShinedePlay</h5>
+                            <p class="card-text">
+                                Réalisation du site en collaboration avec un ami. Ce site a pour objectif de gérer un
+                                serveur Minecraft pour gérer le téléchargement des mods nécéssaires et la whitelist.
+                            </p>
+                            <ul>
+                                <li>Symfony</li>
+                                <li>Api Rest</li>
+                                <li>MySql</li>
+                            </ul>
+                        </div>
+                        <a href="https://play.shinederu.lol">Voir le site</a>
+                        <a href="https://github.com/Silverfabien/MC-Ananas-API">Projet sur Github</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="{{ asset('pictures/blog.jpg') }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Blog</h5>
+                            <p class="card-text">
+                                Projet dans le but de montrer mes compétences en simulant un blog avec interaction
+                                possible graçe aux commentaires.
+                            </p>
+                            <ul>
+                                <li>Symfony</li>
+                                <li>Bootstrap</li>
+                                <li>MySql</li>
+                                <li>Jquery</li>
+                            </ul>
+                        </div>
+                        <a href="https://blog.silversat.ovh">Voir le site</a>
+                        <a href="https://github.com/Silverfabien/blog_perso">Projet sur Github</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="{{ asset('pictures/prileria.png') }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Prileria Profil</h5>
+                            <p class="card-text">
+                                Site créer pour la gestion administrative d'un serveur Minecraft public. Gestion à
+                                distance des joueurs (Bannissements, ...).
+                            </p>
+                            <ul>
+                                <li>Symfony</li>
+                                <li>Bootstrap</li>
+                                <li>MySql</li>
+                                <li>Jquery</li>
+                            </ul>
+                        </div>
+                        <p class="site">Site plus disponible</p>
+                        <a href="https://github.com/Silverfabien/prileria_profile">Projet sur Github</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="{{ asset('pictures/rpg.jpg') }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Rpg</h5>
+                            <p class="card-text">
+                                Projet dans le but de me familiariser avec Ajax et le javascript.
+                            </p>
+                            <ul>
+                                <li>Symfony</li>
+                                <li>MySql</li>
+                                <li>Jquery</li>
+                                <li>Ajax</li>
+                            </ul>
+                        </div>
+                        <a href="https://github.com/Silverfabien/rpg">Projet sur Github</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="{{ asset('pictures/blindtest.jpg') }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Blind test</h5>
+                            <p class="card-text">
+                               Création d'un blind test.
+                            </p>
+                            <ul>
+                                <li>Symfony</li>
+                                <li>Bootstrap</li>
+                                <li>MySql</li>
+                                <li>Jquery</li>
+                            </ul>
+                        </div>
+                        <a href="https://github.com/Silverfabien/Blindtest">Projet sur Github</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="skills">
+        <div class="skills-list">
+            <h2>Mes technologies utilisées</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Langage natif</h4>
+                    <div class="progress">
+                        <div class="progress-bar w-50 bar-php" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">PHP</div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar w-75 bar-html" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">HTML</div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar w-40 bar-css" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">CSS</div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar w-25 bar-js" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Javascript</div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar w-10 bar-sql" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">SQL</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4>Framework & CMS</h4>
+                    <div class="progress">
+                        <div class="progress-bar w-70 bar-symfony" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">Symfony</div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar w-30 bar-bootstrap" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">Bootstrap</div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar w-20 bar-jquery" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">Jquery</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="contact-me">
+            <h2>Formulaire de contact</h2>
+            {{ form_start(form) }}
+                {{ form_row(form.email) }}
+                {{ form_row(form.subject) }}
+                {{ form_row(form.message) }}
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            {{ form_end(form) }}
+        </div>
+    </section>
+{% endblock %}

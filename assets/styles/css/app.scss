@@ -1,5 +1,14 @@
 @import '~bootstrap/scss/bootstrap';
 
+@import 'content/default/index';
+@import 'layouts/navbar';
+@import 'layouts/footer';
+
 body {
-    background-color: lightgray;
+    background-color: #1a1d20;
+    color: white;
+
+    .pt-10 {
+        padding-top: 100px;
+    }
 }

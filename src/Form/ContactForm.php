@@ -1,25 +1,27 @@
 <?php
 
-namespace App\Form\Security;
+namespace App\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
-use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class LoginForm extends AbstractType
+class ContactForm extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
             ->add('email', EmailType::class, [
-                'label' => 'Votre email',
-                'attr' => ['autocomplete' => 'email']
+                'label' => 'Votre email'
             ])
-            ->add('password', PasswordType::class, [
-                'label' => 'Votre mot de passe',
-                'attr' => ['autocomplete' => 'current-password']
+            ->add('subject', TextType::class, [
+                'label' => 'Sujet'
+            ])
+            ->add('message', TextareaType::class, [
+                'label' => 'Votre message'
             ])
         ;
     }
@@ -27,7 +29,7 @@ class LoginForm extends AbstractType
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'csrf_protection' => false
+            // Configure your form options here
         ]);
     }
 }
